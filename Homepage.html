@@ -1,0 +1,30 @@
+<html >
+<head>
+  <title>Predicted load</title>  
+</head>
+
+<body>
+ <div>
+	<h1>Predict Load</h1>
+
+  <form action="{{ url_for('getprediction')}}"method="GET"></form>
+
+      <input type="text" name="Month" placeholder="Month" required="required" />
+    	<input type="text" name="Average of temperature" placeholder="temperature" required="required" />
+        <input type="text" name="Average of cloud_cover" placeholder="cloud_cover" required="required" />
+        <input type="text" name="Average of dew_point" placeholder="dew_point" required="required" />
+        <input type="text" name="Average of wind_speed" placeholder="wind_speed" required="required" />
+        <input type="text" name="Average of humidity" placeholder="humidity" required="required" />
+        <input type="text" name="Average of apparent_temperature" placeholder="apparent_temperature" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">get Load</button>
+    </form>
+
+   <br>
+   <br>
+
+
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
